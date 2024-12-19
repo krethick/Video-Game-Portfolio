@@ -11,6 +11,19 @@
     <link rel="stylesheet" href="mediaqueries.css">
 </head>
 <body> 
+   <div class="splash">
+        <i class="fade-in">
+          A creative and alternative thinker who loves innovating and conducting research on video games.
+        </i>  
+        <button class="Continue" onclick="closeSplash()">Let's Go</button>
+   </div>
+
+   <div class="hero">
+       <video autoplay loop muted plays-inline class="back-video">
+           <source src="./assets/Projects/video1.mp4" type="video/mp4">
+       </video>
+
+   </div>
    <nav id="desktop-nav"> <!--nav is used for navigation-->
        <div class="logo">Welcome to my Portfolio</div>
        <div>
@@ -48,16 +61,19 @@
       <!--We will be creating a section-->
       <section id="profile">
          <div class="section__pic-container">
-             <img src="./assets/Profile-Photo/profile1.png" alt="Krethick Chakravarthy profile picture">
+               <img src="./assets/Profile-Photo/profile1.png" alt="Krethick Chakravarthy profile picture"/>
          </div>
+        
          <div class="section__text">
           <p class="section__text__p1">Hello, I'm</p>
           <h1 class="title">Krethick Chakravarthy</h1>
-          <p class="section__text__p2">Aspiring Game Developer</p>
+          <p class="section__text__p2">Game Developer</p>
           <div class="btn-container">
             <button
               class="btn btn-color-2"
-              onclick="window.open('./assets/Resume/resume.pdf')"
+            
+              onclick="window.open('./assets/Resume/Krethick_Chakravarthy_Resume.pdf')"
+              
             >Download Resume
           </button>
             <button
@@ -74,7 +90,7 @@
 
           <div id="social-containers">
              <img src="./assets/github.png" alt="My Github Profile" class="icon"
-             onclick="location.href='https://https://github.com/krethick'"
+             onclick="location.href='https://github.com/krethick'"
              />
 
           </div>
@@ -99,18 +115,19 @@
             alt="experience icon"
             class="icon"
             />
-             <h3>Experience</h3>
+             <h3>Experience</h3> 
+             <br>
              <!--<img src="./assets/byjus.png" alt="Byjus Logo" width="50" height="50">-->
-            <p>BYJU'S</p>
+            <strong>BYJU'S</strong>
             <p> Game Developer (Internship)</p>
             <p> Dec 2020 - June 2021</p>
            <br>
            <!-- <img src="./assets/byjus.png" alt="Byjus Logo" width="50" height="50">-->
-            <p>BYJU'S</p>
+            <strong>BYJU'S</strong>
             <p> Junior Game Developer (Fulltime)</p>
             <p> Feb 2022 - Dec 2022</p>
             <br>
-            <p>Adriotts</p>
+            <strong>Adriotts</strong>
             <p> Full Stack Developer (Internship)</p>
             <p> Jan 2023 - Aug 2023</p>
         </div>
@@ -120,7 +137,8 @@
           class="icon"
           />
           <h3>Education</h3>
-          <p>Christ (Deemed to be University)</p>
+          <br>
+          <strong>Christ (Deemed to be University)</strong>
           <p>Bachelor of Computer Applications</p>
           <p> June 2018 - May 2021</p>
         </div>
@@ -205,7 +223,7 @@
                   class="icon"
                   />
                   <div>
-                    <h4 class="text-container24">Jira (Agile)</h4>
+                    <h4 class="text-container24">Jira</h4>
                     <div class="progress-bar-container">
                       <div class="progress-bar" style="width: 70%;"></div>
                     </div>
@@ -405,10 +423,13 @@
             </div>
             <h2 class="experience-sub-title project-title">Osmo Work Sheets (2021)</h2>
             <div class="text-container">
+               
               <div class="btn-container1">
+                <!-- 
                 <button class="btn btn-color-2 project-btn" onclick="window.open('./assets/Projects/PROJECT_PRESENTATION.pdf')">
                   PDF
-                </button>   
+                </button>
+                -->
               </div>
             <ul class="snake-content">
               <li>These are interactive worksheets for kids below Grade 3.</li> 
@@ -445,11 +466,11 @@
     </div>
       </div>
       
-      <!--<img src="./assets/arrow.png" 
+      <!-- <img src="./assets/arrow.png" 
       alt="Arrow icon" 
       class="icon arrow" 
       onclick="location.href='./#projects'"
-      />-->
+      /> -->
     </section>
     <section id="projects1">
       <div class="experience-details-container">
@@ -479,27 +500,34 @@
           </div>
       <div class="details-container color-container">
           <div class="article-container1">
-            <img src="./assets/Projects/taxi.png" alt="Project 1" class="project-img" width="0" height="0"/>
+            <iframe width="360" height="320"
+              src="./assets/Projects/flappy_bird.mp4" 
+             frameborder="0"
+            allowfullscreen>
+    </iframe>
           </div>
-          <h2 class="experience-sub-title project-title1">Kaufman Cabs(.NET C# MINI PROJECT)</h2>
+          <h2 class="experience-sub-title project-title1">Flappy Bird Game (2024)</h2>
           <div class="text-container"> 
             <div class="btn-container">
-              <button class="btn btn-color-2 project-btn1" onclick="window.open('./assets/Projects/project.pdf')">
-                PDF
+              <button class="btn btn-color-2 project-btn1" onclick="location.href='https://github.com/krethick/Flappy-Bird'">
+                Github
               </button>   
             </div>
           <ul class="snake-content">
-            <li>A small C# taxi project created during my undergraduate studies.</li>
-            <li>Implemented basic front end features and database.</li>
-            <li>Included Basic Login, Sign up, Menu</li>
-            <li>Different types of taxis are available for travel.</li>
-            <li>Advance booking option is implemented.</li>
+            <li>A small game where the bird can shoot rockets.</li>
+            <li>The lower pipe moves downwards once a missile hits the red button.</li>
+            <li>Included skull objects as enemies.</li>
+            <li>Implemented Player Prefs to store the data.</li>
+            <li>In the game there is an option to clear the high score.</li>
             <br>
             <strong>Role:</strong> Solo Project
            
         </ul>
          </div>
       </div>
+
+      
+      
        <div class="details-container color-container">
           <div class="article-container">
             <iframe width="350" height="315" src="https://www.youtube.com/embed/YCGM-Ju5g7I?si=E6KI3v2tpd9NBhoB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -522,7 +550,98 @@
       class="icon arrow" 
       onclick="location.href='./#Art-work'"
       />
-    </section>
+      </section>
+
+      <section id="projects1">
+        <div class="experience-details-container">
+          <div class="about-containers">
+            <div class="details-container color-container">
+              <div class="article-container">
+                <iframe width="360" height="320"
+                src="./assets/Projects/AI_game.mp4" 
+               frameborder="0"
+              allowfullscreen>
+      </iframe>
+              </div>
+              <h2 class="experience-sub-title project-title">Classy Clash (2024)</h2>
+              <div class="btn-container">
+                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/krethick/Classy-Clash'">
+                  Github
+                </button>
+              </div>
+              <div class="text-container">
+              </br> 
+              <ul class="snake-content">
+                <li>A small tile map game using C++ and RayLib.</li>
+                <li>Included basic AI Movement of enemies.</li>
+                <li>When enemies comes near the player the health decreases.</li>
+                <li>The map has been created using the Tiled Software.</li>
+                <br>
+                <strong>Role:</strong> Solo Project
+            </ul>
+            </div>
+            </div>
+        <div class="details-container color-container">
+            <div class="article-container1">
+              <iframe width="360" height="320"
+                src="./assets/Projects/William_Butcher.mp4" 
+               frameborder="0"
+              allowfullscreen>
+      </iframe>
+            </div>
+            <h2 class="experience-sub-title project-title1">Butcher (2024)</h2>
+            <div class="text-container"> 
+              <div class="btn-container">
+                <button class="btn btn-color-2 project-btn1" onclick="location.href='https://github.com/krethick/Butcher'">
+                  Github
+                </button>   
+              </div>
+            <ul class="snake-content">
+              <li>I drew inspiration from the character William Butcher from The Boys series.</li>
+              <li>Developed the Character and its animation using Adobe Fuse CC and Maximo .</li>
+              <li>A third-person game where the player uses laser vision to destroy enemies.</li>
+              <li>Implemented basic functionality using Unity and C#(In Development)</li>
+              <br>
+              <strong>Role:</strong> Solo Project(Byog Game Jam)
+             
+          </ul>
+           </div>
+        </div>
+  
+        
+        
+         <div class="details-container color-container">
+          <div class="article-container9">
+            <iframe width="360" height="320"
+              src="./assets/Projects/Rocket_Boost.mp4" 
+             frameborder="0"
+            allowfullscreen>
+          </iframe>
+          <h2 class="experience-sub-title project-title1">Rocket Boost (2024)</h2>
+          <div class="text-container"> 
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn1" onclick="location.href='https://github.com/krethick/Rocket-Jump/tree/main/Rocket_Jump'">
+                Github
+              </button>   
+            </div>
+          <ul class="snake-content">
+            <li>Player should skillfully fly a spaceship and avoid environmental hazards.</li>
+            <li>Go from the starting point to the ending point to complete the level, then progress to the next level.</li>
+            <li>Completed the game using Unity and C#.</li>
+            <li>Implemented Oscillation Logic using Mathf.Sin().</li>
+            <br>
+            <strong>Role:</strong> Solo Project 
+          </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+          <!-- <img src="./assets/arrow.png" 
+          alt="Arrow icon" 
+          class="icon arrow" 
+          onclick="location.href='./#Art-work'" 
+          /> -->
+          </section>
     <section id="Art-work">
       <P class="section__text__p1">Blender</P>
       <h1 class="title">Art Work</h1>
@@ -716,7 +835,11 @@
           <div class="details-container1 color-container">
             <div class="article-container2">
               <img src="./assets/Good-Times/6.jpeg" alt="Project 1" class="project-img" width="312" height="350"/>
+              <i class="Volunteer"> 
+                <span> Received this certificate for organizing a quiz event for fellow college members.
+              </i>
             </div>
+
             <h2 class="experience-sub-title project-title"></h2>
             <div class="btn-container">
             </div>
@@ -730,6 +853,9 @@
           <div class="details-container1 color-container">
             <div class="article-container2">
               <img src="./assets/Good-Times/7.jpeg" alt="Project 1" class="project-img" width="312" height="350"/>
+              <i class="Volunteer"> 
+                <span> Received this certificate for organizing a treasure hunt while simultaneously managing the auditorium and ensuring crowd control.
+              </i>
             </div>
             <h2 class="experience-sub-title project-title"></h2>
             <div class="btn-container">
@@ -743,6 +869,9 @@
          <div class="details-container1 color-container">
             <div class="article-container2">
               <img src="./assets/Good-Times/11.png" alt="Project 1" class="project-img" width="312" height="350"/>
+              <i class="Volunteer"> 
+                <span>Photograph of the Interface Event along with the volunteers.
+              </i>
             </div>
             <h2 class="experience-sub-title project-title"></h2>
             <div class="btn-container">
@@ -762,6 +891,9 @@
             <div class="details-container1 color-container">
               <div class="article-container2">
                 <img src="./assets/Good-Times/10.jpg" alt="Project 1" class="project-img" width="312" height="350"/>
+                <i class="Volunteer"> 
+                  <span> Volunteered for the National Science Fest organized by the Science Department in celebration of National Science Day.
+                </i>
               </div>
               <h2 class="experience-sub-title project-title"></h2>
               <div class="btn-container">
@@ -775,7 +907,7 @@
             </div>
             <div class="details-container1 color-container">
               <div class="article-container2">
-                <img src="./assets/Good-Times/12.jpeg" alt="Project 1" class="project-img" width="312" height="350"/>
+                <img src="./assets/Good-Times/12.JPG" alt="Project 1" class="project-img" width="312" height="350"/>
               </div>
               <h2 class="experience-sub-title project-title"></h2>
               <div class="btn-container">

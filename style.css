@@ -14,6 +14,38 @@
    padding: 0;
 }
 
+/* .back-video{
+   position: absolute;
+   right: 0;
+   bottom: 0;
+   z-index: -1;
+} */
+
+/* Included Background Video */
+.back-video {
+   position: fixed; /* Use fixed to keep it visible on scroll */
+   top: 0;
+   left: 0;
+   width: 100vw; /* 100% of the viewport width */
+   height: 100vh; /* 100% of the viewport height */
+   object-fit: cover; /* Ensures the video scales proportionally and fills the screen */
+   z-index: -1; /* Keeps it behind other content */
+}
+
+@media (min-aspect-ratio: 16/9){
+   .back-video{
+      width:100%;
+      height: auto;
+   }
+}
+
+@media (max-aspect-ratio: 16/9){
+   .back-video{
+      width:auto;
+      height: 100%;
+   }
+}
+
 /* We target the entire content which is present in the body*/
 body{
    /* We directly use from the google fonts*/ 
@@ -35,6 +67,7 @@ a,
 .btn{
     /* This indicates button text speed */
    transition: all 300ms ease;
+   
 }
 
 /* DESKTOP NAV */
@@ -43,6 +76,7 @@ nav, .nav-links {
    /* Flexible Box Layout Module, makes it easier to design flexible responsive layout 
    structure without using float or positioning. */
    display: flex;
+   
 }
 
 nav{
@@ -52,6 +86,7 @@ nav{
    justify-content: space-around;
    align-items: center;
    height: 17vh;
+   
 }
 
 .nav-links{
@@ -59,6 +94,7 @@ nav{
    gap: 2rem;
    list-style: none;
    font-size: 1.5rem;
+   
 }
 
 a{
@@ -70,16 +106,17 @@ a{
 
 /* Changes the text to grey */
 a:hover{
-   color:grey;
+   color:rgb(175, 19, 19);
    text-decoration: underline;
    text-underline-offset: 1rem;
-   text-decoration-color: rgb(181,181,181);
+   text-decoration-color: rgb(170, 21, 21);
 }
 
 /* Changes the name font size*/
 .logo{
    font-size: 2rem;
    margin-left: 10.8rem;
+   
 }
 
 /* When hovered the cursor becomes default */
@@ -216,11 +253,16 @@ section{
 
 .section__text__p1{
    text-align: center;
+   font-weight: 999;
+   font-size: 1.23rem;
+   color: rgb(99, 16, 16);
 }
 
 .section__text__p2{
    font-size: 1.75rem;
    margin-bottom: 1rem;
+   color: rgb(48, 47, 47);
+
 }
 
 .title {
@@ -247,6 +289,7 @@ section{
    display: flex;
    justify-content: center;
    gap: 1rem;
+   
 }
 
 .btn{
@@ -255,12 +298,14 @@ section{
    padding: 1rem;
    width: 8rem;
    border-radius: 2rem;
+   
 }
 
 .btn-color-1,
 .btn-color-2:hover{
    background:rgb(53,53,53,53);
    color: white ;
+   border: 2px solid #1b1a1a;
 }
 
 .btn-color-1:hover{
@@ -269,6 +314,7 @@ section{
 
 .btn-color-2{
    background: none;
+   border: 2px solid #1b1a1a;
 }
 
 .btn-color-2:hover{
@@ -300,11 +346,14 @@ section{
    gap: 2rem;
    margin-bottom: 2rem;
    margin-top: 2rem;
+   
+   
 }
 
 .about-details-container{
    justify-content: center;
    flex-direction: column;
+   
 }
 
 .about-containers, .about-details-container{
@@ -322,14 +371,16 @@ section{
    top: 21.5rem;
 }
 
+
 .details-container{
    padding: 1.5rem;
    flex:1;
-   background: white;
+   background: rgb(220, 214, 214);
    border-radius: 2rem;
    border: rgb(53,53,53) 0.1rem solid;
    border-color: rgb(163,163,163);
    text-align: center;
+   
 }
 
 .section-container{
@@ -355,12 +406,15 @@ section{
    font-weight: 600;
    font-size: 1.75rem;
    margin-bottom: 1rem;
+   
 }
 
 .experience-details-container{
    display: flex;
    justify-content: center;
    flex-direction: column;
+   
+   
 }
 
 .article-container{
@@ -370,6 +424,7 @@ section{
    flex-direction: row;
    gap:2.5rem;
    justify-content: space-around;
+   
 }
 
 article{
@@ -383,14 +438,22 @@ article .icon {
    cursor: default;
 }
 
+
 .progress-bar-container {
    width: 100%;
-   height: 10px; /* Set the height of the progress bar container */
-   background-color: #ddd; /* Background color for the progress bar container */
    margin-top: 5px; /* Adjust margin as needed */
    overflow: hidden; /* Hide overflow to clip the gradient */
-   
 }
+
+/*
+.progress-bar-container {
+   width: 100%;
+   height: 10px; // Set the height of the progress bar container 
+   background-color: #ddd; // Background color for the progress bar container 
+   margin-top: 5px; // Adjust margin as needed 
+   overflow: hidden; // Hide overflow to clip the gradient 
+}
+*/
 
 
 .progress-bar {
@@ -453,7 +516,7 @@ article .icon {
 }
 
 .text-container24{
-   margin-right: 11px; 
+   margin-right: 69px; 
 }
 
 .text-container25{
@@ -477,6 +540,7 @@ article .icon {
 #projects{
    position: relative;
    height: 1250px;
+   
 }
 
 #projects1{
@@ -484,9 +548,16 @@ article .icon {
    height: 960px;
 }
 
+#projects2{
+   position: relative;
+   height: 960px;
+   width: 300px;
+}
+
 .color-container{
    border-color: rgb(163,163,163);
-   background: rgb(250,250,250);
+   /* background: rgb(250,250,250); */
+   background: rgb(220, 212, 212);
 }
 
 .project-img{
@@ -507,16 +578,23 @@ article .icon {
    
 }
 
+.project-title2{
+   margin: .9rem;
+   color: black;
+   
+}
+
 .project-btn{
    color:black;
-   border-color: rgb(163,163,163);
+   border-color: rgb(18, 18, 18);
 }
 
 .project-btn1{
    color:black;
-   border-color: rgb(163,163,163);
+   border-color: rgb(15, 15, 15);
    margin-bottom: 20px;
 }
+
 
 
 /* Text of snake content */
@@ -526,6 +604,7 @@ article .icon {
    text-align: left;
    margin-left: 35px;
    color: black;
+   
 }
 
 .article-container1{
@@ -534,13 +613,19 @@ height: 316px;
 
 }
 
+.article-container2{
+   width: 350px;
+   height: 316px;
+   
+   }
+
 
 /* Art SECTION */
 
 #Art-work{
    position: relative;
    height: 400px;
-   
+
 }
 
 #Art-work1{
@@ -559,9 +644,11 @@ height: 316px;
 }
 
 .details-container1{
-  background: white;
+  background: rgba(213, 47, 47, 0);
   position: 0px;
+  
 }
+
 
 
 /* VOLUNTEERING */
@@ -595,11 +682,13 @@ height: 316px;
    justify-content: center;
    border-radius: 2rem;
    border: rgb(53,53,53) 0.1rem solid;
-   border-color: rgb(163,163,163);
+   border-color: rgb(10, 10, 10);
    background: (250,250,250);
    margin: 2rem auto;
    padding: 0.5rem;
 }
+
+
 
 .contact-info-container{
    display: flex;
@@ -745,6 +834,8 @@ height: 316px;
    height: 150px;
 }
 
+
+
 .modal-content, #caption {
    -webkit-animation-name: zoom;
    -webkit-animation-duration: 0.6s;
@@ -794,6 +885,14 @@ height: 316px;
    animation-duration: 0.6s;
 }
 
+.modal-content, #caption7 {
+   -webkit-animation-name: zoom;
+   -webkit-animation-duration: 0.6s;
+   animation-name: zoom;
+   animation-duration: 0.6s;
+}
+
+
 @-webkit-keyframes zoom {
    from {-webkit-transform:scale(0)}
    to {-webkit-transform:scale(1)}
@@ -822,9 +921,86 @@ height: 316px;
     cursor: pointer;
 }
 
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 1280px){
    .modal-content {
        width: 100%;
    }
 }
+
+/* Volunteer text */
+.Volunteer{
+   color:rgb(23, 2, 2);
+   font-size: 1.2rem;
+   font-weight: 500;
+}
+
+/* Splash Screen */
+.splash{
+   position: fixed;
+   top:0;
+   left:0;
+   width: 100%;
+   height: 100vh;
+   background: black;
+   z-index: 200;
+   color: white;
+   text-align: center;
+   line-height: 90vh;
+
+}
+
+.splash.display-none{
+   position: fixed;
+   opacity: 0;
+   top:0;
+   left:0;
+   width: 100%;
+   height: 100vh;
+   background: black;
+   z-index: -10;
+   color: white;
+   text-align: center;
+   line-height: 90vh;
+   transition: all 0.5s;
+}
+
+@keyframes fadeIn{
+   to{
+      opacity: 1 ;
+   }
+}
+
+.fade-in{
+   opacity: 0;
+   animation: fadeIn 1s ease-in forwards;
+   font-weight: 600;
+   font-size: 25px;
+}
+
+.Continue {
+   font-weight: 600;
+   transition: all 300ms ease;
+   padding: 1rem;
+   width: 8rem;
+   border-radius: 2rem;
+   position: fixed; 
+   top: 55%; 
+   left: 50%; 
+   transform: translate(-50%, -50%); 
+   display: flex;
+   justify-content: center;
+   gap: 1rem;
+   background-color: grey; 
+   border: none;
+   font-size: 15px;
+   cursor: pointer;
+   font-style: italic;
+   color: #080303;
+}
+
+.Continue:hover{
+   background: rgb(195, 102, 102);
+}
+
+
 

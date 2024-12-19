@@ -1,8 +1,9 @@
-@media screen and (max-width: 1400px){
+@media only screen and (max-width: 1400px){
     #profile {
         height: 83vh;
         margin-bottom: 2rem;
     }
+
 
     .about container {
         flex-wrap: wrap;
@@ -12,7 +13,7 @@
 
 
 
-@media screen and (max-width: 1200px){
+@media only screen and (max-width: 1200px){
     #desktop-nav {
         display: none;
     }
@@ -33,47 +34,68 @@
     #experience,
     .experience-details-container{
         margin-top: 2rem;
-        margin-bottom: 1100px;
+        margin-bottom: 70px;
     }
 
     #projects,
     .experience-details-container{
         margin-top: 2rem;
-        margin-bottom: 1670px;
+        margin-bottom: 70px;
+        margin-left: 7px;
     }
 
     #projects1,
     .experience-details-container{
-        margin-top: 1rem;
-        margin-bottom: 1400px;
+        margin-top: 2rem;
+        margin-bottom: 70px;
+        margin-left: 7px;
     }
 
-    #Art-work, .experience-details-container{
+    #projects1,
+    .experience-details-container{
         margin-top: 2rem;
-        margin-bottom: 810px;
+        margin-bottom: 70px;
+        margin-left: 7px;
+        
+    }
+ 
+   /* This belongs to the rocketboost article-container9 */
+    .article-container9{
+        margin-top: 2rem;
+        margin-bottom: 70px;
+        
+    }
+    
+  
+
+ 
+    #Art-work, .experience-details-container{
+        margin-top: 7rem;
+        margin-bottom: 50px;
+        
     }
 
     #Art-work1, .experience-details-container{
-        margin-top: 2rem;
-        margin-bottom: 810px;
+        margin-top: -5rem;
+        margin-bottom: 50px;
     }
 
     #Art-work2, .experience-details-container{
         margin-top: 2rem;
-        margin-bottom: 390px;
+        margin-bottom: 70px;
     }
 
     #Volunteering, .experience-details-container{
         margin-top: 2rem;
-        margin-bottom: 400px;
+        margin-bottom: 70px;
     }
 
     #Volunteering1, .experience-details-container{
         margin-top: 2rem;
-        margin-bottom: 340px;
+        margin-bottom: 70px;
     }
 
-    
+  
 
     #profile,
         .section-container{
@@ -177,3 +199,13 @@
             margin-right: 9.5px;
         }
     }
+
+  
+
+ .Volunteer{
+    color:rgb(23, 2, 2);
+    font-size: 1rem;
+    
+ }
+
+   
