@@ -135,6 +135,18 @@ document.addEventListener('DOMContentLoaded', (e) => {
   }, 15000);
 });
 
+// Mute the rocket boost video
+document.getElementById('videoFrame').addEventListener('load', function () {
+  const iframe = document.getElementById('videoFrame');
+  const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+
+  // Try to mute the video if the iframe content is accessible
+  if (iframeDoc) {
+    const video = iframeDoc.querySelector('video');
+    if (video) video.muted = true;
+  }
+});
+
 const header = document.querySelector('.header');
 
 window.onscroll = function(){
